@@ -19,6 +19,9 @@
 		F7FEFEDC295B3F6000EC6BE3 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEDB295B3F6000EC6BE3 /* LocationViewController.swift */; };
 		F7FEFEDE295B3F6600EC6BE3 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEDD295B3F6600EC6BE3 /* EpisodeViewController.swift */; };
 		F7FEFEE0295B3F7A00EC6BE3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEDF295B3F7A00EC6BE3 /* SettingsViewController.swift */; };
+		F7FEFEE2295B48C600EC6BE3 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEE1295B48C600EC6BE3 /* Service.swift */; };
+		F7FEFEE4295B48CC00EC6BE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEE3295B48CC00EC6BE3 /* Request.swift */; };
+		F7FEFEE6295B499600EC6BE3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEE5295B499600EC6BE3 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		F7FEFEDB295B3F6000EC6BE3 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		F7FEFEDD295B3F6600EC6BE3 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		F7FEFEDF295B3F7A00EC6BE3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F7FEFEE1295B48C600EC6BE3 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		F7FEFEE3295B48CC00EC6BE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		F7FEFEE5295B499600EC6BE3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				F7FEFED8295B3ECB00EC6BE3 /* Core */,
-				F7FEFEB5295B3AD100EC6BE3 /* TabViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +128,9 @@
 		F7FEFECA295B3D0100EC6BE3 /* APIClients */ = {
 			isa = PBXGroup;
 			children = (
+				F7FEFEE1295B48C600EC6BE3 /* Service.swift */,
+				F7FEFEE3295B48CC00EC6BE3 /* Request.swift */,
+				F7FEFEE5295B499600EC6BE3 /* Endpoint.swift */,
 			);
 			path = APIClients;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 		F7FEFED8295B3ECB00EC6BE3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F7FEFEB5295B3AD100EC6BE3 /* TabViewController.swift */,
 				F7FEFED9295B3F4F00EC6BE3 /* CharacterViewController.swift */,
 				F7FEFEDB295B3F6000EC6BE3 /* LocationViewController.swift */,
 				F7FEFEDD295B3F6600EC6BE3 /* EpisodeViewController.swift */,
@@ -220,13 +229,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7FEFED3295B3E7300EC6BE3 /* LocationModel.swift in Sources */,
+				F7FEFEE4295B48CC00EC6BE3 /* Request.swift in Sources */,
 				F7FEFEDE295B3F6600EC6BE3 /* EpisodeViewController.swift in Sources */,
+				F7FEFEE6295B499600EC6BE3 /* Endpoint.swift in Sources */,
 				F7FEFED5295B3E8000EC6BE3 /* CharacterModel.swift in Sources */,
 				F7FEFEE0295B3F7A00EC6BE3 /* SettingsViewController.swift in Sources */,
 				F7FEFEDA295B3F4F00EC6BE3 /* CharacterViewController.swift in Sources */,
 				F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */,
 				F7FEFEB2295B3AD100EC6BE3 /* AppDelegate.swift in Sources */,
 				F7FEFEB4295B3AD100EC6BE3 /* SceneDelegate.swift in Sources */,
+				F7FEFEE2295B48C600EC6BE3 /* Service.swift in Sources */,
 				F7FEFED7295B3E8900EC6BE3 /* EpisodeModel.swift in Sources */,
 				F7FEFEDC295B3F6000EC6BE3 /* LocationViewController.swift in Sources */,
 			);

@@ -7,7 +7,8 @@
 
 import UIKit
 
-class EpisodeViewController: UIViewController {
+/// Controller to show and search for Episode
+final class EpisodeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
