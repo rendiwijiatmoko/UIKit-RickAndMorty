@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F76E46612962D243003E9FEC /* SingleLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46602962D243003E9FEC /* SingleLocationModel.swift */; };
+		F76E46632962D296003E9FEC /* OriginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46622962D296003E9FEC /* OriginModel.swift */; };
 		F7FEFEB2295B3AD100EC6BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB1295B3AD100EC6BE3 /* AppDelegate.swift */; };
 		F7FEFEB4295B3AD100EC6BE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */; };
 		F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB5295B3AD100EC6BE3 /* TabViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F76E46602962D243003E9FEC /* SingleLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationModel.swift; sourceTree = "<group>"; };
+		F76E46622962D296003E9FEC /* OriginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginModel.swift; sourceTree = "<group>"; };
 		F7FEFEAE295B3AD100EC6BE3 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FEFEB1295B3AD100EC6BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,7 +110,9 @@
 			children = (
 				F7FEFED2295B3E7300EC6BE3 /* LocationModel.swift */,
 				F7FEFED4295B3E8000EC6BE3 /* CharacterModel.swift */,
+				F76E46602962D243003E9FEC /* SingleLocationModel.swift */,
 				F7FEFED6295B3E8900EC6BE3 /* EpisodeModel.swift */,
+				F76E46622962D296003E9FEC /* OriginModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -232,10 +238,12 @@
 				F7FEFEE4295B48CC00EC6BE3 /* Request.swift in Sources */,
 				F7FEFEDE295B3F6600EC6BE3 /* EpisodeViewController.swift in Sources */,
 				F7FEFEE6295B499600EC6BE3 /* Endpoint.swift in Sources */,
+				F76E46612962D243003E9FEC /* SingleLocationModel.swift in Sources */,
 				F7FEFED5295B3E8000EC6BE3 /* CharacterModel.swift in Sources */,
 				F7FEFEE0295B3F7A00EC6BE3 /* SettingsViewController.swift in Sources */,
 				F7FEFEDA295B3F4F00EC6BE3 /* CharacterViewController.swift in Sources */,
 				F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */,
+				F76E46632962D296003E9FEC /* OriginModel.swift in Sources */,
 				F7FEFEB2295B3AD100EC6BE3 /* AppDelegate.swift in Sources */,
 				F7FEFEB4295B3AD100EC6BE3 /* SceneDelegate.swift in Sources */,
 				F7FEFEE2295B48C600EC6BE3 /* Service.swift in Sources */,
