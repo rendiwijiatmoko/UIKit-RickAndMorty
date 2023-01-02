@@ -10,6 +10,9 @@
 		F76E46612962D243003E9FEC /* SingleLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46602962D243003E9FEC /* SingleLocationModel.swift */; };
 		F76E46632962D296003E9FEC /* OriginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46622962D296003E9FEC /* OriginModel.swift */; };
 		F76E46692962E6C0003E9FEC /* GetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46682962E6C0003E9FEC /* GetAllCharactersResponse.swift */; };
+		F76E466B2962EC73003E9FEC /* CharactersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E466A2962EC73003E9FEC /* CharactersListViewModel.swift */; };
+		F76E466D2962EE79003E9FEC /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E466C2962EE79003E9FEC /* CharacterListView.swift */; };
+		F76E467129630AA4003E9FEC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E467029630AA4003E9FEC /* Extensions.swift */; };
 		F7FEFEB2295B3AD100EC6BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB1295B3AD100EC6BE3 /* AppDelegate.swift */; };
 		F7FEFEB4295B3AD100EC6BE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */; };
 		F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB5295B3AD100EC6BE3 /* TabViewController.swift */; };
@@ -31,6 +34,9 @@
 		F76E46602962D243003E9FEC /* SingleLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationModel.swift; sourceTree = "<group>"; };
 		F76E46622962D296003E9FEC /* OriginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginModel.swift; sourceTree = "<group>"; };
 		F76E46682962E6C0003E9FEC /* GetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersResponse.swift; sourceTree = "<group>"; };
+		F76E466A2962EC73003E9FEC /* CharactersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersListViewModel.swift; sourceTree = "<group>"; };
+		F76E466C2962EE79003E9FEC /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		F76E467029630AA4003E9FEC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F7FEFEAE295B3AD100EC6BE3 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FEFEB1295B3AD100EC6BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 		F7FEFEC6295B3CD500EC6BE3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F76E466C2962EE79003E9FEC /* CharacterListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 		F7FEFEC8295B3CE700EC6BE3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F76E466A2962EC73003E9FEC /* CharactersListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -167,6 +175,7 @@
 				F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */,
 				F7FEFEBA295B3AD200EC6BE3 /* Assets.xcassets */,
 				F7FEFEBC295B3AD200EC6BE3 /* LaunchScreen.storyboard */,
+				F76E467029630AA4003E9FEC /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -265,10 +274,13 @@
 				F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */,
 				F76E46632962D296003E9FEC /* OriginModel.swift in Sources */,
 				F7FEFEB2295B3AD100EC6BE3 /* AppDelegate.swift in Sources */,
+				F76E466D2962EE79003E9FEC /* CharacterListView.swift in Sources */,
 				F7FEFEB4295B3AD100EC6BE3 /* SceneDelegate.swift in Sources */,
+				F76E467129630AA4003E9FEC /* Extensions.swift in Sources */,
 				F7FEFEE2295B48C600EC6BE3 /* Service.swift in Sources */,
 				F7FEFED7295B3E8900EC6BE3 /* EpisodeModel.swift in Sources */,
 				F7FEFEDC295B3F6000EC6BE3 /* LocationViewController.swift in Sources */,
+				F76E466B2962EC73003E9FEC /* CharactersListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
