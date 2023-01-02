@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F76E46612962D243003E9FEC /* SingleLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46602962D243003E9FEC /* SingleLocationModel.swift */; };
 		F76E46632962D296003E9FEC /* OriginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46622962D296003E9FEC /* OriginModel.swift */; };
+		F76E46692962E6C0003E9FEC /* GetAllCharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76E46682962E6C0003E9FEC /* GetAllCharactersResponse.swift */; };
 		F7FEFEB2295B3AD100EC6BE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB1295B3AD100EC6BE3 /* AppDelegate.swift */; };
 		F7FEFEB4295B3AD100EC6BE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */; };
 		F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEFEB5295B3AD100EC6BE3 /* TabViewController.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		F76E46602962D243003E9FEC /* SingleLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationModel.swift; sourceTree = "<group>"; };
 		F76E46622962D296003E9FEC /* OriginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginModel.swift; sourceTree = "<group>"; };
+		F76E46682962E6C0003E9FEC /* GetAllCharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCharactersResponse.swift; sourceTree = "<group>"; };
 		F7FEFEAE295B3AD100EC6BE3 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FEFEB1295B3AD100EC6BE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FEFEB3295B3AD100EC6BE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F76E46642962E65E003E9FEC /* DataTypes */ = {
+			isa = PBXGroup;
+			children = (
+				F7FEFED2295B3E7300EC6BE3 /* LocationModel.swift */,
+				F7FEFED4295B3E8000EC6BE3 /* CharacterModel.swift */,
+				F76E46602962D243003E9FEC /* SingleLocationModel.swift */,
+				F7FEFED6295B3E8900EC6BE3 /* EpisodeModel.swift */,
+				F76E46622962D296003E9FEC /* OriginModel.swift */,
+			);
+			path = DataTypes;
+			sourceTree = "<group>";
+		};
+		F76E46652962E673003E9FEC /* APIResponseType */ = {
+			isa = PBXGroup;
+			children = (
+				F76E46682962E6C0003E9FEC /* GetAllCharactersResponse.swift */,
+			);
+			path = APIResponseType;
+			sourceTree = "<group>";
+		};
 		F7FEFEA5295B3AD100EC6BE3 = {
 			isa = PBXGroup;
 			children = (
@@ -108,11 +130,8 @@
 		F7FEFEC7295B3CDE00EC6BE3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F7FEFED2295B3E7300EC6BE3 /* LocationModel.swift */,
-				F7FEFED4295B3E8000EC6BE3 /* CharacterModel.swift */,
-				F76E46602962D243003E9FEC /* SingleLocationModel.swift */,
-				F7FEFED6295B3E8900EC6BE3 /* EpisodeModel.swift */,
-				F76E46622962D296003E9FEC /* OriginModel.swift */,
+				F76E46652962E673003E9FEC /* APIResponseType */,
+				F76E46642962E65E003E9FEC /* DataTypes */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -240,6 +259,7 @@
 				F7FEFEE6295B499600EC6BE3 /* Endpoint.swift in Sources */,
 				F76E46612962D243003E9FEC /* SingleLocationModel.swift in Sources */,
 				F7FEFED5295B3E8000EC6BE3 /* CharacterModel.swift in Sources */,
+				F76E46692962E6C0003E9FEC /* GetAllCharactersResponse.swift in Sources */,
 				F7FEFEE0295B3F7A00EC6BE3 /* SettingsViewController.swift in Sources */,
 				F7FEFEDA295B3F4F00EC6BE3 /* CharacterViewController.swift in Sources */,
 				F7FEFEB6295B3AD100EC6BE3 /* TabViewController.swift in Sources */,

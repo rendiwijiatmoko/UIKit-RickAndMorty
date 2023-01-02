@@ -30,7 +30,7 @@ enum CharacterStatus: String, Codable {
 
 enum CharacterGender: String, Codable {
     case male = "Male"
-    case female = "Felmale"
+    case female = "Female"
     case Genderless = "Genderless"
     case `unknown` = "unknown"
 }
