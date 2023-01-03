@@ -69,6 +69,47 @@ final class Request {
         self.pathComponents = pathComponents
         self.queryParameters = queryParameters
     }
+    
+    convenience init?(url: URL) {
+        let string = url.absoluteString
+        if !string.contains(Constant.baseUrl) {
+            return nil
+        }
+        let trimmed = string.replacingOccurrences(of: Constant.baseUrl+"/", with: "")
+        if trimmed.contains("/") {
+            let components = trimmed.components(separatedBy: "/")
+            if !components.isEmpty {
+                let endpointString = components[0]
+                if let RMEndpoint = Endpoint(rawValue: endpointString) {
+                    self.init(endPoint: RMEndpoint)
+                    return
+                }
+            }
+        } else if trimmed.contains("?") {
+            let components = trimmed.components(separatedBy: "?")
+            if !components.isEmpty {
+                let endpointString = components[0]
+                let queryItemString = components[1]
+                
+                let queryItems: [URLQueryItem] = queryItemString.components(separatedBy: "&").compactMap({
+                    guard $0.contains("=") else {
+                        return nil
+                    }
+                    
+                    let parts = $0.components(separatedBy: "=")
+                    
+                    return URLQueryItem(name: parts[0], value: parts[1])
+                })
+                
+                if let RMEndpoint = Endpoint(rawValue: endpointString) {
+                    self.init(endPoint: RMEndpoint, queryParameters: queryItems)
+                    return
+                }
+            }
+        }
+        
+        return nil
+    }
 }
 
 

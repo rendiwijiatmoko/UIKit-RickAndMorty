@@ -7,8 +7,17 @@
 
 import UIKit
 
+protocol CharacterListViewDelegate: AnyObject {
+    func characterListView(
+        _ characterListView: CharacterListView,
+        didSelectCharacter character: CharacterModel
+    )
+}
+
 /// View that handle showing list of characters, loader, etc
 final class CharacterListView: UIView {
+    
+    public weak var delegate: CharacterListViewDelegate?
     
     // MARK: - Variable
     private let viewModel = CharactersListViewModel()
@@ -24,12 +33,13 @@ final class CharacterListView: UIView {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isHidden = true
         collectionView.alpha = 0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(CharacterCollectionViewCell.self, forCellWithReuseIdentifier: CharacterCollectionViewCell.cellIdentifier)
+        collectionView.register(FooterLoadingCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: FooterLoadingCollectionReusableView.identifier)
         
         return collectionView
     }()
@@ -41,6 +51,7 @@ final class CharacterListView: UIView {
         addSubviews(collectionView, spinner)
         addConstraint()
         spinner.startAnimating()
+        viewModel.delegate = self
         viewModel.fetchCharacters()
         setupCollectionView()
     }
@@ -67,13 +78,29 @@ final class CharacterListView: UIView {
     private func setupCollectionView() {
         collectionView.dataSource = viewModel
         collectionView.delegate = viewModel
-        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
-            self.spinner.stopAnimating()
-            self.collectionView.isHidden = false
-            
-            UIView.animate(withDuration: 0.4) {
-                self.collectionView.alpha = 1
-            }
-        })
+//        DispatchQueue.main.asyncAfter(deadline: .now()+2, execute: {
+//
+//        })
+    }
+}
+
+extension CharacterListView: CharactersListViewModelDelegate {
+    func didSelectCharacter(_ character: CharacterModel) {
+        delegate?.characterListView(self, didSelectCharacter: character)
+    }
+    
+    func didLoadInitialCharacters() {
+        spinner.stopAnimating()
+        collectionView.isHidden = false
+        collectionView.reloadData()
+        UIView.animate(withDuration: 0.4) {
+            self.collectionView.alpha = 1
+        }
+    }
+    
+    func didLoadCharacters(with newIndexPath: [IndexPath]) {
+        collectionView.performBatchUpdates {
+            self.collectionView.insertItems(at: newIndexPath)
+        }
     }
 }

@@ -7,10 +7,20 @@
 
 import Foundation
 
-final class CharacterCollectionViewModel {
+final class CharacterCollectionViewModel: Hashable, Equatable {
     public let characterName: String
     private let characterStatus: CharacterStatus
     private let characterImageUrl: URL?
+    
+    static func == (lhs: CharacterCollectionViewModel, rhs: CharacterCollectionViewModel) -> Bool {
+        return lhs.hashValue == rhs.hashValue
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(characterName)
+        hasher.combine(characterStatus)
+        hasher.combine(characterImageUrl)
+    }
     
     init(
         characterName: String,
@@ -23,7 +33,7 @@ final class CharacterCollectionViewModel {
     }
     
     public var characterStatusText: String {
-        return characterStatus.rawValue
+        return "Status: \(characterStatus.text)"
     }
     
     public func fetchImage(completion: @escaping (Result<Data, Error>) -> Void) {
